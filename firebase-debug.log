@@ -1,0 +1,38 @@
+[debug] [2022-08-06T09:37:16.335Z] ----------------------------------------------------------------------
+[debug] [2022-08-06T09:37:16.336Z] Command:       /Users/rschweers/.nvm/versions/node/v16.13.0/bin/node /Users/rschweers/.nvm/versions/node/v16.13.0/bin/firebase deploy --only hosting
+[debug] [2022-08-06T09:37:16.336Z] CLI Version:   11.4.0
+[debug] [2022-08-06T09:37:16.336Z] Platform:      darwin
+[debug] [2022-08-06T09:37:16.336Z] Node Version:  v16.13.0
+[debug] [2022-08-06T09:37:16.337Z] Time:          Sat Aug 06 2022 11:37:16 GMT+0200 (Central European Summer Time)
+[debug] [2022-08-06T09:37:16.337Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-06T09:37:16.378Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-06T09:37:16.378Z] > authorizing via signed-in user (raymondschweers85@gmail.com)
+[debug] [2022-08-06T09:37:16.378Z] [iam] checking project todos-nextjs-tailwindcss for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-08-06T09:37:16.379Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/todos-nextjs-tailwindcss:testIamPermissions [none]
+[debug] [2022-08-06T09:37:16.380Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/todos-nextjs-tailwindcss:testIamPermissions x-goog-quota-user=projects/todos-nextjs-tailwindcss
+[debug] [2022-08-06T09:37:16.380Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/todos-nextjs-tailwindcss:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-06T09:37:16.673Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/todos-nextjs-tailwindcss:testIamPermissions 200
+[debug] [2022-08-06T09:37:16.673Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/todos-nextjs-tailwindcss:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-06T09:37:16.675Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/todos-nextjs-tailwindcss [none]
+[debug] [2022-08-06T09:37:16.983Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/todos-nextjs-tailwindcss 200
+[debug] [2022-08-06T09:37:16.983Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/todos-nextjs-tailwindcss {"projectId":"todos-nextjs-tailwindcss","projectNumber":"207636054501","displayName":"todos-nextjs-tailwindcss","name":"projects/todos-nextjs-tailwindcss","resources":{"hostingSite":"todos-nextjs-tailwindcss","storageBucket":"todos-nextjs-tailwindcss.appspot.com","locationId":"europe-west"},"state":"ACTIVE","etag":"1_3bcd8983-5a6c-4780-86e5-e35b700c6269"}
+[info] 
+[info] === Deploying to 'todos-nextjs-tailwindcss'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2022-08-06T09:37:16.987Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/todos-nextjs-tailwindcss [none]
+[debug] [2022-08-06T09:37:17.251Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/todos-nextjs-tailwindcss 200
+[debug] [2022-08-06T09:37:17.251Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/todos-nextjs-tailwindcss {"projectId":"todos-nextjs-tailwindcss","projectNumber":"207636054501","displayName":"todos-nextjs-tailwindcss","name":"projects/todos-nextjs-tailwindcss","resources":{"hostingSite":"todos-nextjs-tailwindcss","storageBucket":"todos-nextjs-tailwindcss.appspot.com","locationId":"europe-west"},"state":"ACTIVE","etag":"1_3bcd8983-5a6c-4780-86e5-e35b700c6269"}
+[debug] [2022-08-06T09:37:17.254Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/207636054501/sites/todos-nextjs-tailwindcss/versions [none]
+[debug] [2022-08-06T09:37:17.254Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/207636054501/sites/todos-nextjs-tailwindcss/versions {"config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-08-06T09:37:19.101Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/207636054501/sites/todos-nextjs-tailwindcss/versions 200
+[debug] [2022-08-06T09:37:19.102Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/207636054501/sites/todos-nextjs-tailwindcss/versions {"name":"projects/207636054501/sites/todos-nextjs-tailwindcss/versions/97422dd7233b7db0","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[todos-nextjs-tailwindcss]: beginning deploy... 
+[info] i  hosting[todos-nextjs-tailwindcss]: found 2 files in out 
+[debug] [2022-08-06T09:37:19.111Z] [hosting] uploading with 200 concurrency
+[debug] [2022-08-06T09:37:19.112Z] [hosting] hash cache [b3V0] not populated
+[debug] [2022-08-06T09:37:19.119Z] [hosting] hash cache [b3V0] stored for 2 files
+[debug] [2022-08-06T09:37:19.119Z] [hosting][hash queue][FINAL] {"max":4,"min":3,"avg":3.5,"active":0,"complete":2,"success":2,"errored":0,"retried":0,"total":2,"elapsed":7}
+[debug] [2022-08-06T09:37:19.120Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/207636054501/sites/todos-nextjs-tailwindcss/versions/97422dd7233b7db0:populateFiles [none]
+[debug] [2022-08-06T09:37:19.120Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/207636054501/sites/todos-nextjs-tailwindcss/versions/97422dd7233b7db0:populateFiles {"files":{"/404.html":"05cbc6f94d7a69ce2e29646eab13be2c884e61ba93e3094df5028866876d18b3","/index.html":"3221a574cf8aab4fec3ce056af9c04550c06c066bda9fd2d22aefec29ca10d4d"}}

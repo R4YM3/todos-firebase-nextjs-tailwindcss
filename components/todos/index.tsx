@@ -45,7 +45,7 @@ const Todos = ({ heading }: ITodos) => {
         <FormTodos />
 
         <ul className="todo-list mt-4">
-          {todos.map((todo) => <Todo {...todo} />)}
+          {todos.map((todo) => <Todo {...todo} key={todo.id} />)}
         </ul>
       </div>
     </div>
@@ -56,10 +56,7 @@ const FormTodos = () => {
   return (
     <form onSubmit={handleAddTodo}>
       <div className="flex items-center text-sm mt-2">
-        <button >
-          <svg className="w-3 h-3 mr-3 focus:outline-none" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-            <path d="M12 4v16m8-8H4"></path>
-          </svg>
+        <button >+
         </button>
         <span>Click to add task</span>
       </div>
@@ -68,18 +65,17 @@ const FormTodos = () => {
   )
 }
 
-const Todo = ({ id, title }: ITodo) => {
+const Todo = ({ title }: ITodo) => {
   return (
-    <li className="flex justify-between items-center mt-3" key={id}>
+    <li className="flex justify-between items-center mt-3">
       <div className="flex items-center">
         <input type="checkbox" name="" id="" onClick={handleStatusTodo} />
         <div className="capitalize ml-3 text-sm font-semibold">{title}</div>
+        remove
       </div>
       <div>
         <button onClick={handleDeleteTodo}>
-          <svg className=" w-4 h-4 text-gray-600 fill-current" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-            <path d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
+          remove
         </button>
       </div>
     </li >
